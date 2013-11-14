@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CalonApiWebsite</title>
+  <title>Calon API Website</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="wrapper">
+    <header id="header">
+      <h1>Calon API Website</h1>
+      <nav class="nav-g">
+        <ul>
+          <li><span>Home</span></li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <footer id="footer">
+      &copy; All rights reserved.
+    </footer>
+  </div>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
