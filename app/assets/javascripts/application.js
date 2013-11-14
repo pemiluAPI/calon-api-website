@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.dataTables
+//= require jquery.dataTables.columnFilter
+//= require candidates
 //= require_tree .

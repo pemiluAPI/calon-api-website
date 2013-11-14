@@ -1,2 +1,62 @@
-<h2>Candidates#index</h2>
-<p>Find me in app/views/candidates/index.html.erb</p>
+<h2>List of all Candidates</h2>
+
+<form action="" class="forms">
+  <fieldset class="units-row">
+    <legend>Filter</legend>
+    <label class="unit-20">
+      Lembaga
+      <span id="sLembaga"></span>
+    </label>
+    <label class="unit-20">
+      Kelamin
+      <span id="sKelamin"></span>
+    </label>
+    <label class="unit-20">
+      Dapil
+      <span id="sDapil"></span>
+    </label>
+    <label class="unit-20">
+      Partai
+      <span id="sPartai"></span>
+    </label>
+  </fieldset>
+</form>
+
+
+<table id="tblCandidates" class="width-100">
+  <thead>
+    <tr>
+      <th class="width-10">Lembaga</th>
+      <th class="width-30">Nama</th>
+      <th style="display: none;">Kelamin</th>
+      <th class="width-10">No. Urut</th>
+      <th class="width-20">Dapil</th>
+      <th class="width-30">Provinsi</th>
+      <th style="display: none;">Partai</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @response.parsed_response['data']['results'].first['candidates'].each do |candidate| %>
+    <tr>
+      <td><%= candidate['lembaga'] %></td>
+      <td><%= candidate['nama'] %></td>
+      <td style="display: none;"><%= candidate['kelamin'] %></td>
+      <td><%= candidate['calon'] %></td>
+      <td><%= candidate['dapil']['nama'] unless candidate['dapil'].blank? %></td>
+      <td><%= candidate['provinsi']['nama'] unless candidate['provinsi'].blank? %></td>
+      <td style="display: none;"><%= candidate['partai']['nama'] unless candidate['partai'].blank? %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <th></th>
+      <th style="display: none;"></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th style="display: none;"></th>
+    </tr>
+  </tfoot>
+</table>
