@@ -23,21 +23,21 @@ end
 namespace :deploy do
   task :start do
     on roles(:all) do
-      execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3065 -e #{fetch(:stage)} -d start"
+      execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3066 -e #{fetch(:stage)} -d start"
     end
   end
 
   task :restart do
     on roles(:all) do
       if remote_file_exists? "#{current_path}/tmp/pids/thin.pid"
-        execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3065 -e #{fetch(:stage)} restart"
+        execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3066 -e #{fetch(:stage)} restart"
       end
     end
   end
 
   task :stop do
     on roles(:all) do
-      execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3065 -e #{fetch(:stage)} stop"
+      execute "cd #{current_path};#{fetch(:rbenv_path)}/bin/rbenv exec bundle exec thin -p 3066 -e #{fetch(:stage)} stop"
     end
   end
 
