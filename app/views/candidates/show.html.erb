@@ -1,0 +1,40 @@
+<h2>Rincian calon</h2>
+
+<br>
+
+<%= link_to "« Back to List of candidates", candidates_path, class: "btn btn-blue" %>
+
+<br>
+<br>
+
+<p>
+  <strong>Lembaga:&nbsp;</strong><%= @candidate['lembaga'] %>
+</p>
+
+<p>
+  <strong>Nama:&nbsp;</strong><%= @candidate['nama'] %>
+</p>
+
+<p>
+  <strong>Kelamin:&nbsp;</strong><%= @candidate['kelamin'] %>
+</p>
+
+<p>
+  <strong>Domisili:&nbsp;</strong><%= @candidate['tinggal'] %>
+</p>
+
+<p>
+  <strong>No. Urut:&nbsp;</strong><%= @candidate['calon'] %>
+</p>
+
+<p>
+  <strong>Provinsi:&nbsp;</strong><%= @candidate['provinsi']['nama'] unless @candidate['provinsi'].blank? %>
+</p>
+
+<p>
+  <strong>Dapil:&nbsp;</strong><%= @candidate['dapil']['nama'] unless @candidate['dapil'].blank? %>
+</p>
+
+<p>
+  <strong>Partai:&nbsp;</strong><%= @candidate['partai']['nama'] unless @candidate['partai'].blank? %>
+</p>

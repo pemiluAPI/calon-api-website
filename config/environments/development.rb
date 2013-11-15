@@ -26,4 +26,8 @@ CalonApiWebsite::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # PemiluAPI
+  config.pemilu_api_endpoint = "http://pemiluapi.local/candidate"
+  config.pemilu_api_key = "09c7672eb7791ec697dfe079450afa59"
 end

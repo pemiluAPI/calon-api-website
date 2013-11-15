@@ -39,7 +39,7 @@
     <% @response.parsed_response['data']['results'].first['candidates'].each do |candidate| %>
     <tr>
       <td><%= candidate['lembaga'] %></td>
-      <td><%= candidate['nama'] %></td>
+      <td><%= link_to candidate['nama'], controller: "candidates", action: "show", id: candidate['calon'] %></td>
       <td style="display: none;"><%= candidate['kelamin'] %></td>
       <td><%= candidate['calon'] %></td>
       <td><%= candidate['dapil']['nama'] unless candidate['dapil'].blank? %></td>
