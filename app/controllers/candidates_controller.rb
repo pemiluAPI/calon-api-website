@@ -5,6 +5,6 @@ class CandidatesController < ApplicationController
 
   def show
     response = HTTParty.get("#{Rails.configuration.pemilu_api_endpoint}/api/candidates/#{params[:id]}?apiKey=#{Rails.configuration.pemilu_api_key}")
-    @candidate = response.parsed_response['data']['results'].first['candidates'].first
+    @candidate = response.parsed_response['data']['results']['candidates'].first
   end
 end
