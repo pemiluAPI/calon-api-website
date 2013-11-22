@@ -40,4 +40,12 @@ $(document).ready(function() {
       });
     }
   });
+
+  $('#btnReset').click(function() {
+    oTable.fnFilter(unescape(''), 0, true, false);
+    oTable.fnFilter(unescape(''), 2, true, false);
+    oTable.fnFilter(unescape(''), 3, true, false);
+    oTable.fnFilter(unescape(''), 4, true, false);
+    oTable.fnFilter(unescape(''), 5, true, false);
+  });
 });
