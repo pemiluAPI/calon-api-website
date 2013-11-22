@@ -17,4 +17,27 @@ $(document).ready(function() {
       {"type": "select", "sSelector": "#sPartai"}
     ]
   });
+
+  // When DPD is chosen, Dapil and Partai should be disabled
+  // When DPR is chosen, all the filters should be enable
+  $('#sLembaga select').change(function() {
+    if(this.value == 'DPD') {
+      // Reset select
+      $('#sDapil select').find('option:first-child').prop('selected', true);
+      $('#sPartai select').find('option:first-child').prop('selected', true);
+
+      // Reset filter
+      oTable.fnFilter(unescape(''), 3, true, false);
+      oTable.fnFilter(unescape(''), 4, true, false);
+
+      // Disable Dapil and Partai
+      $('#sDapil select').attr("disabled", "disabled");
+      $('#sPartai select').attr("disabled", "disabled");
+
+    } else {
+      $('.forms').find(':disabled').each(function() {
+        $(this).removeAttr("disabled");
+      });
+    }
+  });
 });
