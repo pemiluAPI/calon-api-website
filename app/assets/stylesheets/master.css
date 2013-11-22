@@ -13,6 +13,9 @@
   padding: 3.3em 0;
   text-align: center;
 }
+#frmCandidates .units-row .unit-20 {
+  margin-left: 0;
+}
 
 /* =Header
 -----------------------------------------------------------------------------*/

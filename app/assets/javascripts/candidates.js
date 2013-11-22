@@ -13,7 +13,7 @@ $(document).ready(function() {
       null,
       {"type": "select", "sSelector": "#sKelamin"},
       {"type": "select", "sSelector": "#sDapil"},
-      null,
+      {"type": "select", "sSelector": "#sProvinsi"},
       {"type": "select", "sSelector": "#sPartai"}
     ]
   });
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
       // Reset filter
       oTable.fnFilter(unescape(''), 3, true, false);
-      oTable.fnFilter(unescape(''), 4, true, false);
+      oTable.fnFilter(unescape(''), 5, true, false);
 
       // Disable Dapil and Partai
       $('#sDapil select').attr("disabled", "disabled");
