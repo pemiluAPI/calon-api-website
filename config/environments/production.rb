@@ -77,4 +77,8 @@ CalonApiWebsite::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # PemiluAPI
+  config.pemilu_api_endpoint = "http://api.pemiluapi.org/calon"
+  config.pemilu_api_key = "09c7672eb7791ec697dfe079450afa59"
 end
