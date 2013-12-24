@@ -11,7 +11,7 @@ $(document).ready(function() {
     "aoColumns": [
       {"type": "select", "sSelector": "#sLembaga"},
       null,
-      {"type": "select", "sSelector": "#sKelamin"},
+      {"type": "select", "sSelector": "#sJenisKelamin"},
       {"type": "select", "sSelector": "#sDapil"},
       {"type": "select", "sSelector": "#sProvinsi"},
       {"type": "select", "sSelector": "#sPartai"}

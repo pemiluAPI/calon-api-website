@@ -9,7 +9,7 @@
     </label>
     <label>
       Kelamin
-      <span id="sKelamin"></span>
+      <span id="sJenisKelamin"></span>
     </label>
     <label>
       Provinsi
@@ -36,7 +36,7 @@
     <tr>
       <th class="width-10">Lembaga</th>
       <th class="width-30">Nama</th>
-      <th class="width-10">Kelamin</th>
+      <th class="width-10">Jenis Kelamin</th>
       <th class="width-20">Dapil</th>
       <th class="width-30">Provinsi</th>
       <th style="display: none;">Partai</th>
@@ -47,7 +47,7 @@
     <tr>
       <td><%= candidate['lembaga'] %></td>
       <td><%= link_to candidate['nama'], {controller: "candidates", action: "show", id: candidate['id']}, {target: "_blank"} %></td>
-      <td><%= candidate['kelamin'] %></td>
+      <td><%= candidate['jenis_kelamin'] %></td>
       <td><%= candidate['dapil']['nama'] unless candidate['dapil'].blank? %></td>
       <td><%= candidate['provinsi']['nama'] unless candidate['provinsi'].blank? %></td>
       <td style="display: none;"><%= candidate['partai']['nama'] unless candidate['partai'].blank? %></td>
