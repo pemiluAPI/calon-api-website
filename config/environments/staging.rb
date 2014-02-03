@@ -80,5 +80,5 @@ CalonApiWebsite::Application.configure do
 
   # PemiluAPI
   config.pemilu_api_endpoint = "http://pemiluapi.stagingapps.net/candidate"
-  config.pemilu_api_key = "5deea37086f7c2690dad9fd95cf5d6c8"
+  config.pemilu_api_key = "c560ad03d85ccb8fdf2167450dc030d9"
 end
