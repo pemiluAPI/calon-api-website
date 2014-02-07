@@ -3,37 +3,37 @@
 <br>
 
 <p>
-  <img src="<%= @candidate['foto_url'] %>" style="max-height:300px;" alt="Foto <%= @candidate['nama'] %>">
+  <img src="<%= @caleg['foto_url'] %>" style="max-height:300px;" alt="Foto <%= @caleg['nama'] %>">
 </p>
 
 <p>
-  <strong>Lembaga:&nbsp;</strong><%= @candidate['lembaga'] %>
+  <strong>Lembaga:&nbsp;</strong><%= @caleg['lembaga'] %>
 </p>
 
 <p>
-  <strong>Nama:&nbsp;</strong><%= @candidate['nama'] %>
+  <strong>Nama:&nbsp;</strong><%= @caleg['nama'] %>
 </p>
 
 <p>
-  <strong>Kelamin:&nbsp;</strong><%= @candidate['jenis_kelamin'] %>
+  <strong>Kelamin:&nbsp;</strong><%= @caleg['jenis_kelamin'] %>
 </p>
 
 <p>
-  <strong>Domisili:&nbsp;</strong><%= @candidate['domisili'] %>
+  <strong>Domisili:&nbsp;</strong><%= @caleg['kab_kota_tinggal'] %>
 </p>
 
 <p>
-  <strong>Urutan:&nbsp;</strong><%= @candidate['urutan'] %>
+  <strong>Urutan:&nbsp;</strong><%= @caleg['urutan'] %>
 </p>
 
 <p>
-  <strong>Provinsi:&nbsp;</strong><%= @candidate['provinsi']['nama'] unless @candidate['provinsi'].blank? %>
+  <strong>Provinsi:&nbsp;</strong><%= @caleg['provinsi']['nama'] unless @caleg['provinsi'].blank? %>
 </p>
 
 <p>
-  <strong>Dapil:&nbsp;</strong><%= @candidate['dapil']['nama'] unless @candidate['dapil'].blank? %>
+  <strong>Dapil:&nbsp;</strong><%= @caleg['dapil']['nama'] unless @caleg['dapil'].blank? %>
 </p>
 
 <p>
-  <strong>Partai:&nbsp;</strong><%= @candidate['partai']['nama'] unless @candidate['partai'].blank? %>
+  <strong>Partai:&nbsp;</strong><%= @caleg['partai']['nama'] unless @caleg['partai'].blank? %>
 </p>
