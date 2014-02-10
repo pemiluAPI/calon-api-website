@@ -43,14 +43,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @response.parsed_response['data']['results']['candidates'].each do |candidate| %>
+    <% @response.parsed_response['data']['results']['caleg'].each do |caleg| %>
     <tr>
-      <td><%= candidate['lembaga'] %></td>
-      <td><%= link_to candidate['nama'], {controller: "candidates", action: "show", id: candidate['id']}, {target: "_blank"} %></td>
-      <td><%= candidate['jenis_kelamin'] %></td>
-      <td><%= candidate['dapil']['nama'] unless candidate['dapil'].blank? %></td>
-      <td><%= candidate['provinsi']['nama'] unless candidate['provinsi'].blank? %></td>
-      <td style="display: none;"><%= candidate['partai']['nama'] unless candidate['partai'].blank? %></td>
+      <td><%= caleg['lembaga'] %></td>
+      <td><%= link_to caleg['nama'], {controller: "candidates", action: "show", id: caleg['id']}, {target: "_blank"} %></td>
+      <td><%= caleg['jenis_kelamin'] %></td>
+      <td><%= caleg['dapil']['nama'] unless caleg['dapil'].blank? %></td>
+      <td><%= caleg['provinsi']['nama'] unless caleg['provinsi'].blank? %></td>
+      <td style="display: none;"><%= caleg['partai']['nama'] unless caleg['partai'].blank? %></td>
     </tr>
     <% end %>
   </tbody>
