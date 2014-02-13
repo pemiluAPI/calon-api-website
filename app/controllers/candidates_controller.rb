@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
   def index
-    @response = HTTParty.get("#{Rails.configuration.pemilu_api_endpoint}/api/caleg?apiKey=#{Rails.configuration.pemilu_api_key}")    
+    @response = HTTParty.get("#{Rails.configuration.pemilu_api_endpoint}/api/caleg?apiKey=#{Rails.configuration.pemilu_api_key}", timeout: 500)
   end
 
   def show
