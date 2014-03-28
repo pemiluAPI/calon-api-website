@@ -6,34 +6,102 @@
   <img src="<%= @caleg['foto_url'] %>" style="max-height:300px;" alt="Foto <%= @caleg['nama'] %>">
 </p>
 
-<p>
-  <strong>Lembaga:&nbsp;</strong><%= @caleg['lembaga'] %>
-</p>
+<div class="row">
+  <div class="col-lg-6">
+    <p>
+      <strong>Lembaga:&nbsp;</strong><%= @caleg['lembaga'] %>
+    </p>
 
-<p>
-  <strong>Nama:&nbsp;</strong><%= @caleg['nama'] %>
-</p>
+    <p>
+      <strong>Nama:&nbsp;</strong><%= @caleg['nama'] %>
+    </p>
 
-<p>
-  <strong>Kelamin:&nbsp;</strong><%= @caleg['jenis_kelamin'] %>
-</p>
+    <p>
+      <strong>Kelamin:&nbsp;</strong><%= @caleg['jenis_kelamin'] %>
+    </p>
 
-<p>
-  <strong>Domisili:&nbsp;</strong><%= @caleg['kab_kota_tinggal'] %>
-</p>
+    <p>
+      <strong>Agama:&nbsp;</strong><%= @caleg['agama'] %>
+    </p>
 
-<p>
-  <strong>Urutan:&nbsp;</strong><%= @caleg['urutan'] %>
-</p>
+    <p>
+      <strong>Tempat Lahir:&nbsp;</strong><%= @caleg['tempat_lahir'] %>
+    </p>
 
-<p>
-  <strong>Provinsi:&nbsp;</strong><%= @caleg['provinsi']['nama'] unless @caleg['provinsi'].blank? %>
-</p>
+    <p>
+      <strong>Tanggal Lahir:&nbsp;</strong><%= @caleg['tanggal_lahir'] %>
+    </p>
 
-<p>
-  <strong>Dapil:&nbsp;</strong><%= @caleg['dapil']['nama'] unless @caleg['dapil'].blank? %>
-</p>
+    <p>
+      <strong>Status Perkawinan:&nbsp;</strong><%= @caleg['status_perkawinan'] %>
+    </p>
 
-<p>
-  <strong>Partai:&nbsp;</strong><%= @caleg['partai']['nama'] unless @caleg['partai'].blank? %>
-</p>
+    <p>
+      <strong>Nama Pasangan:&nbsp;</strong><%= @caleg['nama_pasangan'] %>
+    </p>
+
+    <p>
+      <strong>Jumlah Anak:&nbsp;</strong><%= @caleg['jumlah_anak'] %>
+    </p>
+
+    <p>
+      <strong>Kelurahan Tinggal:&nbsp;</strong><%= @caleg['kelurahan_tinggal'] %>
+    </p>
+
+    <p>
+      <strong>Kecamatan Tinggal:&nbsp;</strong><%= @caleg['kecamatan_tinggal'] %>
+    </p>
+
+    <p>
+      <strong>Kab/Kota Tinggal:&nbsp;</strong><%= @caleg['kab_kota_tinggal'] %>
+    </p>
+
+    <p>
+      <strong>Provinsi Tinggal:&nbsp;</strong><%= @caleg['provinsi_tinggal'] %>
+    </p>
+  </div>
+  <div class="col-lg-6">
+    <div>
+      <strong>Riwayat Pendidikan:&nbsp;</strong>
+      <ul>
+        <% @caleg['riwayat_pendidikan'].each do |pendidikan| %>
+          <li><%=pendidikan['ringkasan']%></li>
+        <%end%>
+      </ul>
+    </div>
+
+    <div>      
+      <strong>Riwayat Pekerjaan:&nbsp;</strong>
+      <ul>
+        <% @caleg['riwayat_pekerjaan'].each do |pekerjaan| %>
+          <li><%=pekerjaan['ringkasan']%></li>
+        <%end%>
+      </ul>
+    </div>
+
+    <div>      
+      <strong>Riwayat Organisasi:&nbsp;</strong>
+      <ul>
+        <% @caleg['riwayat_organisasi'].each do |organisasi| %>
+          <li><%=organisasi['ringkasan']%></li>
+        <%end%>
+      </ul>
+    </div>
+
+    <p>
+      <strong>Urutan:&nbsp;</strong><%= @caleg['urutan'] %>
+    </p>
+
+    <p>
+      <strong>Provinsi:&nbsp;</strong><%= @caleg['provinsi']['nama'] unless @caleg['provinsi'].blank? %>
+    </p>
+
+    <p>
+      <strong>Dapil:&nbsp;</strong><%= @caleg['dapil']['nama'] unless @caleg['dapil'].blank? %>
+    </p>
+
+    <p>
+      <strong>Partai:&nbsp;</strong><%= @caleg['partai']['nama'] unless @caleg['partai'].blank? %>
+    </p>
+  </div>
+</div>
